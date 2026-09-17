@@ -45,10 +45,28 @@ export default async function JournalPost({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="mt-12 max-w-[62ch]">
-            {post.body.map((para, i) => (
-              <p key={i} className="text-[17px] sm:text-[19px] leading-relaxed text-[var(--ivory-100)] mb-6">
-                {para}
-              </p>
+            {post.sections.map((section, i) => (
+              <section key={i} className="mb-14">
+                {section.heading && (
+                  <h2 className="text-[22px] sm:text-[26px] font-medium mb-5" style={{ fontFamily: "var(--font-display)" }}>
+                    {section.heading}
+                  </h2>
+                )}
+                {section.image && (
+                  <figure className="mb-6 -mx-5 sm:mx-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element -- real production stills, self-hosted */}
+                    <img src={section.image.src} alt={section.image.caption ?? ""} className="w-full object-cover rounded-[4px]" style={{ maxHeight: "480px" }} />
+                    {section.image.caption && (
+                      <figcaption className="mt-2 text-[12px] text-[var(--ivory-500)]">{section.image.caption}</figcaption>
+                    )}
+                  </figure>
+                )}
+                {section.paragraphs.map((para, j) => (
+                  <p key={j} className="text-[17px] sm:text-[19px] leading-relaxed text-[var(--ivory-100)] mb-6">
+                    {para}
+                  </p>
+                ))}
+              </section>
             ))}
           </div>
         </article>

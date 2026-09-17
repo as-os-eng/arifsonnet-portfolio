@@ -6,6 +6,7 @@ import { PROFILE } from "@/lib/data";
 
 const LINKS = [
   { label: "Work", href: "/#work" },
+  { label: "Frame", href: "/frame" },
   { label: "Journal", href: "/journal" },
   { label: "Services", href: "/#services" },
   { label: "Contact", href: "/#contact" },

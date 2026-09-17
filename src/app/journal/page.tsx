@@ -17,7 +17,7 @@ export default function JournalIndex() {
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-14">
           {JOURNAL_POSTS.map((post) => (
-            <Link key={post.slug} href={`/journal/${post.slug}`} className="group block">
+            <Link key={post.slug} href={`/journal/${post.slug}`} target="_blank" rel="noopener noreferrer" className="group block">
               <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element -- real project still, self-hosted */}
                 <img src={post.cover} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />

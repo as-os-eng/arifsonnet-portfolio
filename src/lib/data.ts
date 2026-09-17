@@ -207,13 +207,50 @@ export const BRAND_CLIENTS: BrandClient[] = [
   { name: "DBL Group", logo: "/images/brands/dbl-group.png" },
 ];
 
+export interface FrameStill {
+  src: string;
+  caption: string;
+}
+
+// Real production stills — pulled from the same WordPress media library as
+// everything else, alt text lightly cleaned for grammar but the facts
+// (project, client, subject) are exactly what's in the source. This is the
+// only real "frame"/BTS photography currently available; the real
+// filmgrab-style archive Arif is building will replace/extend this.
+export const FRAME_STILLS: FrameStill[] = [
+  { src: "/images/frame/iambrac-nilphamari.jpg", caption: "Aerial view of a Bangladeshi village — I Am BRAC (BRAC documentary series)" },
+  { src: "/images/frame/iambrac-sylhet.jpg", caption: "A foggy morning over open village fields — I Am BRAC, Sylhet" },
+  { src: "/images/frame/iambrac-activist.jpg", caption: "On location near Dhaka University's sculpture grounds — I Am BRAC: The Activist" },
+  { src: "/images/frame/jibika-01.jpg", caption: "A child on camera — BRAC Jibika program documentary" },
+  { src: "/images/frame/jibika-03.jpg", caption: "A mother and daughter at their village home — BRAC Jibika program" },
+  { src: "/images/frame/bkash-01.jpg", caption: "A construction worker in safety gear — bKash commercial" },
+  { src: "/images/frame/bkash-05.jpg", caption: "A village woman with her cow — bKash commercial" },
+  { src: "/images/frame/dbl-ceramic-01.jpg", caption: "A worker in safety gear heading to the production floor — DBL Ceramic corporate film" },
+  { src: "/images/frame/dbl-ceramic-04.jpg", caption: "On the factory floor — DBL Ceramic corporate film" },
+  { src: "/images/frame/nagad-01.jpg", caption: "A village housewife — Nagad micro-finance commercial" },
+  { src: "/images/frame/nagad-03.jpg", caption: "The postal runner (Dak Harkara) on his village route — Nagad commercial" },
+  { src: "/images/frame/runner-auto-01.jpg", caption: "Inside a Runner Automobiles heavy-industry plant" },
+  { src: "/images/frame/prothom-alo-01.jpg", caption: "Commuters reading Prothom Alo at a railway station" },
+  { src: "/images/frame/isd-01.jpg", caption: "A schoolgirl on camera — ISD school commercial" },
+  { src: "/images/frame/tarasima-01.jpg", caption: "Miran Ali, Managing Director, on location — Tarasima Apparels, RMG sector" },
+  { src: "/images/frame/dhaka-drone-01.jpg", caption: "Aerial view over densely populated Dhaka" },
+  { src: "/images/frame/voice-of-masculinity.jpg", caption: "On location for the documentary Voice of Masculinity in Bangladesh" },
+  { src: "/images/frame/pubg-bts.webp", caption: "Behind the scenes — PUBG Mobile Bangladesh commercial" },
+];
+
+export interface JournalSection {
+  heading?: string;
+  paragraphs: string[];
+  image?: { src: string; caption?: string };
+}
+
 export interface JournalPost {
   slug: string;
   title: string;
   dek: string;
   date: string; // ISO
   cover: string;
-  body: string[]; // paragraphs
+  sections: JournalSection[];
 }
 
 // Editorial "Journal" section — same long-form anatomy as the reference
@@ -231,10 +268,26 @@ export const JOURNAL_POSTS: JournalPost[] = [
     dek: "A decade moving between documentary, corporate film, and commercial work — on why the discipline doesn't change, even when the client does.",
     date: "2026-09-17",
     cover: "/images/work/joy-of-giving.jpg",
-    body: [
-      "Most of the work that crosses my desk falls into one of three rooms: a broadcaster's, a boardroom's, or a brand's. Ekattor TV wants a documentary that finds the human story inside a policy issue. DBL Pharmaceuticals and Sublime Facilities Management want a corporate film that makes an invisible process — manufacturing, facilities management — visible and credible. HSBC and PUBG Mobile Bangladesh want a commercial that lands a feeling in under two minutes. Different rooms, different clients, same job: find the one true thing worth pointing a camera at, and don't flinch from it.",
-      "The instinct to treat these as separate disciplines is common, and I think it's a mistake. A documentary that doesn't understand pacing loses its audience the same way a commercial does. A corporate film that doesn't find a real character — a technician, a line manager, a farmer — is just a slideshow with better lighting. The tools change: a 35-minute short film like Prem Puran, produced for Chorki, earns the right to sit with a scene the way a 60-second OVC never can. But the underlying question is identical in every format: who is this actually about, and what do they want that they can't say out loud.",
-      "What's changed over ten years isn't the craft, it's the range of rooms I get invited into. Ekattor Television, HSBC Bank Bangladesh, DBL Pharmaceuticals, Noize Jeans, Sublime Facilities Management, Mentors' British Council, Deligram, Chorki — every one of these came with its own constraints, its own audience, its own idea of what \"good\" looks like. Directing across that range means holding two things at once: a house style you can be recognized by, and enough humility to let each client's real story shape the film instead of the other way around.",
+    sections: [
+      {
+        heading: "Three rooms, one job",
+        paragraphs: [
+          "Most of the work that crosses my desk falls into one of three rooms: a broadcaster's, a boardroom's, or a brand's. Ekattor TV wants a documentary that finds the human story inside a policy issue. DBL Pharmaceuticals and Sublime Facilities Management want a corporate film that makes an invisible process — manufacturing, facilities management — visible and credible. HSBC and PUBG Mobile Bangladesh want a commercial that lands a feeling in under two minutes. Different rooms, different clients, same job: find the one true thing worth pointing a camera at, and don't flinch from it.",
+        ],
+      },
+      {
+        image: { src: "/images/frame/jibika-01.jpg", caption: "A child on camera — BRAC Jibika program documentary" },
+        paragraphs: [
+          "The instinct to treat these as separate disciplines is common, and I think it's a mistake. A documentary that doesn't understand pacing loses its audience the same way a commercial does. A corporate film that doesn't find a real character — a technician, a line manager, a farmer — is just a slideshow with better lighting. The tools change: a 35-minute short film like Prem Puran, produced for Chorki, earns the right to sit with a scene the way a 60-second OVC never can. But the underlying question is identical in every format: who is this actually about, and what do they want that they can't say out loud.",
+        ],
+      },
+      {
+        heading: "What's actually changed",
+        image: { src: "/images/frame/dbl-ceramic-04.jpg", caption: "On the factory floor — DBL Ceramic corporate film" },
+        paragraphs: [
+          "What's changed over ten years isn't the craft, it's the range of rooms I get invited into. Ekattor Television, HSBC Bank Bangladesh, DBL Pharmaceuticals, Noize Jeans, Sublime Facilities Management, Mentors' British Council, Deligram, Chorki — every one of these came with its own constraints, its own audience, its own idea of what \"good\" looks like. Directing across that range means holding two things at once: a house style you can be recognized by, and enough humility to let each client's real story shape the film instead of the other way around.",
+        ],
+      },
     ],
   },
 ];
