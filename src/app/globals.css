@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0c0c0c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+}
+
+/* Dark-cinematic is the intended default look for this site — matches the
+   existing arifsonnet.com theme — but tokens follow the three-state pattern
+   so an explicit light toggle (if ever added) has somewhere real to land. */
+:root {
+  --clay-950: #0a0a0a;
+  --clay-900: #141414;
+  --clay-line: rgba(255, 255, 255, 0.10);
+  --ivory-100: #f5f3ef;
+  --ivory-300: #b8b3a8;
+  --ivory-500: #7a7468;
+  --accent: #d17a3a;
+  --content-w: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--clay-950);
+  color: var(--ivory-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.nav-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--clay-950) 85%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--clay-line);
+}
+
+/* CSS-only entrance fade — framer-motion@12's mount `animate` never fired
+   under this Next 16 + React 19 + Turbopack combo (reproduced live: opacity
+   stayed stuck at its `initial: 0` value, no console error). A plain
+   keyframe sidesteps the whole hydration-timing question and can never
+   leave real content invisible if JS is slow. */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise-in {
+  animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise-in { animation: none; }
+}
