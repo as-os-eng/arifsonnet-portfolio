@@ -8,6 +8,7 @@ const LINKS = [
   { label: "Film", href: "/film" },
   { label: "Documentary", href: "/documentary" },
   { label: "Commercial", href: "/commercial" },
+  { label: "Services", href: "/services" },
   { label: "Frame", href: "/frame" },
   { label: "Journal", href: "/journal" },
   { label: "Bio", href: "/about" },

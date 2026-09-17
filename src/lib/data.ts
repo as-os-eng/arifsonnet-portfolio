@@ -23,13 +23,14 @@ export interface FilmProject {
 // Synopsis and credits are real, pulled and hand-cleaned from each project's
 // arifsonnet.com /works/ page (2026-09-17) — that WordPress site is slated
 // for removal once this site ships, so this is the last live pull from it.
-// Real category → nav route mapping: "Corporate Film" and "Narrative
-// Fiction" both live under the top-level "Film" page, "Documentary" and
-// "Commercial" get their own, matching the site's real nav structure.
+// Real category → nav route mapping: "Film" is narrative fiction only
+// (Prem Puran); "Corporate Film" and "Commercial" both live under the
+// top-level "Commercial" page (client-facing brand/corporate work);
+// "Documentary" gets its own — matching the site's real nav structure.
 export function categoryHref(category: FilmCategory): "/film" | "/documentary" | "/commercial" {
   if (category === "Documentary") return "/documentary";
-  if (category === "Commercial") return "/commercial";
-  return "/film";
+  if (category === "Narrative Fiction") return "/film";
+  return "/commercial";
 }
 
 export const FILM_PROJECTS: FilmProject[] = [
