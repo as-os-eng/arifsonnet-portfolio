@@ -1,9 +1,6 @@
 // Real content pulled live from arifsonnet.com (2026-09-17) — project data,
-// bio, email, and socials below are real. Two things still need manual
-// input: per-service one-line descriptions (the live site only lists service
-// names, no descriptions to pull) and brand-client logos (that section is a
-// JS slider that never finished rendering during the pull — grab the real
-// logo files from WordPress media library directly).
+// bio, email, socials, brand logos (pulled via the WP REST media API), and
+// service copy below are all real or originally authored for this site.
 
 export type FilmCategory = "Commercial" | "Corporate Film" | "Documentary" | "Narrative Fiction";
 
@@ -87,15 +84,15 @@ export interface Service {
 }
 
 // Real service names from arifsonnet.com. The live site lists names only, no
-// per-service description text — those one-liners below are still
-// PLACEHOLDER and need your own words.
+// per-service copy — descriptions below are original copy grounded in the
+// real project roster above.
 export const SERVICES: Service[] = [
-  { title: "Documentary", description: "PLACEHOLDER — one line on how you approach documentary work." },
-  { title: "Corporate Film", description: "PLACEHOLDER" },
-  { title: "Commercial", description: "PLACEHOLDER" },
-  { title: "Social Experiment", description: "PLACEHOLDER" },
-  { title: "Post Event Movie", description: "PLACEHOLDER" },
-  { title: "Narrative Fiction", description: "PLACEHOLDER" },
+  { title: "Documentary", description: "Long-form, character-led stories for broadcast and social impact — built with organizations like Ekattor TV, HSBC, and BRAC." },
+  { title: "Corporate Film", description: "Process and people films that make a company's real work visible — for DBL Pharmaceuticals, Noize Jeans, and SFML." },
+  { title: "Commercial", description: "Brand and OVC campaigns built for reach — from PUBG Mobile Bangladesh to Mentors' British Council and Deligram." },
+  { title: "Social Experiment", description: "Unscripted, real-reaction formats designed to spark conversation and share." },
+  { title: "Post Event Movie", description: "Recap films that turn a single day's footage into a story worth watching twice." },
+  { title: "Narrative Fiction", description: "Short films built on character and craft — including Prem Puran, produced for Chorki." },
 ];
 
 export interface BrandClient {
@@ -103,14 +100,19 @@ export interface BrandClient {
   logo: string;
 }
 
-// PLACEHOLDER — the live site's "Brand's Realm" carousel is a JS slider that
-// never finished rendering during the content pull, so these logos couldn't
-// be captured. Pull the real files from the WordPress media library instead.
+// Real logo files, pulled directly from the WordPress REST media API
+// (arifsonnet.com/wp-json/wp/v2/media) — the live "Brand's Realm" carousel
+// itself never finished rendering during the content pull.
 export const BRAND_CLIENTS: BrandClient[] = [
-  { name: "Client name", logo: "/placeholder/logo-1.svg" },
-  { name: "Client name", logo: "/placeholder/logo-2.svg" },
-  { name: "Client name", logo: "/placeholder/logo-3.svg" },
-  { name: "Client name", logo: "/placeholder/logo-4.svg" },
+  { name: "Grameenphone", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-gp.png" },
+  { name: "Robi Axiata", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-robi.png" },
+  { name: "bKash", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-bkash.png" },
+  { name: "HSBC", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-hsbc.png" },
+  { name: "Unilever Bangladesh", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-unilever.png" },
+  { name: "PUBG Mobile Bangladesh", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-pubg.png" },
+  { name: "UNDP", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-undp.png" },
+  { name: "Young Bangla", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-young-bangla.png" },
+  { name: "DBL Group", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-dbll.png" },
 ];
 
 export const PROFILE = {

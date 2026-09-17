@@ -6,7 +6,7 @@ export function BrandCarousel() {
       <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-[var(--ivory-500)] mb-8 text-center">Brand&apos;s Realm</h2>
       <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-70">
         {BRAND_CLIENTS.map((c) => (
-          // eslint-disable-next-line @next/next/no-img-element -- placeholder logos
+          // eslint-disable-next-line @next/next/no-img-element -- real logos hotlinked from arifsonnet.com for now
           <img key={c.name} src={c.logo} alt={c.name} className="h-8 w-auto grayscale" />
         ))}
       </div>
