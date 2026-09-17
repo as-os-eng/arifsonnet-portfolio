@@ -28,7 +28,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Nav />
       <main className="rise-in">
         <header className="px-5 sm:px-10 pt-8" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
-          <Link href="/#work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
+          <Link href="/work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
             ← Directorial Portfolio
           </Link>
         </header>

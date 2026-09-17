@@ -6,10 +6,10 @@ import { PROFILE } from "@/lib/data";
 // arifsonnet.com (Home / Works / Services / Blog Post / Framegrab /
 // About / Contact), remapped to this site's actual routes.
 const LINKS = [
-  { label: "Work", href: "/#work" },
+  { label: "Films & Documentary", href: "/work" },
   { label: "Frame", href: "/frame" },
   { label: "Journal", href: "/journal" },
-  { label: "Services", href: "/#services" },
+  { label: "Commercials", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

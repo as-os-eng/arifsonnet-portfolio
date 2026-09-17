@@ -72,7 +72,7 @@ export default async function JournalPost({ params }: { params: Promise<{ slug: 
         </article>
 
         <div className="px-5 sm:px-10 mt-20 py-16 border-t border-[var(--clay-line)]" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
-          <Link href="/#work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
+          <Link href="/work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
             ← Back to the directorial portfolio
           </Link>
         </div>
