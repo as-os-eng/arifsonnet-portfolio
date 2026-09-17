@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FILM_PROJECTS, type FilmCategory } from "@/lib/data";
 
 const CATEGORIES: (FilmCategory | "All")[] = ["All", "Documentary", "Corporate Film", "Commercial", "Narrative Fiction"];
@@ -29,22 +30,21 @@ export function FilmGrid() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {items.map((p) => (
-          <a
+          <Link
             key={p.slug}
-            href={p.videoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-[14px] overflow-hidden bg-[var(--clay-900)] border border-[var(--clay-line)]"
+            href={`/work/${p.slug}`}
+            className="group block rounded-[4px] overflow-hidden bg-[var(--clay-900)] border border-[var(--clay-line)]"
           >
             <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element -- real project stills, hotlinked from arifsonnet.com for now */}
+              {/* eslint-disable-next-line @next/next/no-img-element -- real project stills, self-hosted in public/images/work */}
               <img src={p.poster} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
             <div className="p-4">
               <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">{p.category}</span>
               <h3 className="mt-1 text-[15px] font-medium leading-snug">{p.title}</h3>
+              <span className="mt-0.5 block text-[12px] text-[var(--ivory-500)]">{p.client}</span>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

@@ -4,77 +4,169 @@
 
 export type FilmCategory = "Commercial" | "Corporate Film" | "Documentary" | "Narrative Fiction";
 
+export interface Credit {
+  role: string;
+  name: string;
+}
+
 export interface FilmProject {
   slug: string;
   title: string;
   category: FilmCategory;
+  client: string;
   poster: string;
-  videoUrl: string; // links to the real /works/ page on arifsonnet.com for now
+  youtubeId: string;
+  synopsis: string;
+  credits: Credit[];
 }
 
+// Synopsis and credits are real, pulled and hand-cleaned from each project's
+// arifsonnet.com /works/ page (2026-09-17) — that WordPress site is slated
+// for removal once this site ships, so this is the last live pull from it.
 export const FILM_PROJECTS: FilmProject[] = [
   {
     slug: "squad-up-with-the-legends",
-    title: "Squad Up with The Legends! — OVC — PUBGM Bangladesh",
+    title: "Squad Up with The Legends!",
     category: "Commercial",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/08/maxresdefault-1-jpg.webp",
-    videoUrl: "https://arifsonnet.com/works/squad-up-with-the-legends-ii-ovc-ii-pubgm-bangladesh/",
+    client: "PUBG Mobile Bangladesh",
+    poster: "/images/work/squad-up-with-the-legends.webp",
+    youtubeId: "19gVLcBzyss",
+    synopsis: "An adrenaline-pumping PUBG Mobile commercial built around the heart of battle-royale excitement — stunning visuals, heart-pounding moments, and tactical gameplay showcasing the true essence of PUBG.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Producer", name: "Ami Sayeed" },
+      { role: "Cinematographer", name: "L C Rafiq" },
+      { role: "Editor", name: "Alif Islam Mukut" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
   {
     slug: "shopno-jabe-bari",
-    title: "Shopno Jabe Bari — Documentary — Ekattor TV",
+    title: "Shopno Jabe Bari",
     category: "Documentary",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/08/GHORE-FERAR-GAAN-DOCUMENTARY-FOR-71-TV-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/shopno-jabe-bari-barir-maya-ii-documentary-ii-ekattor-media-ltd/",
+    client: "Ekattor TV",
+    poster: "/images/work/shopno-jabe-bari.jpg",
+    youtubeId: "L3kdQ0sKeYk",
+    synopsis: "A captivating documentary for Ekattor TV that delves into the dreams and aspirations of individuals and their relentless pursuit of a better life — a journey through hope, resilience, and the human spirit.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Cinematographer", name: "Robin Gazi" },
+      { role: "Editor", name: "Arefin Badal Mamun" },
+      { role: "Line Producer", name: "Sayed Konok" },
+      { role: "Produced by", name: "Ekattor Television" },
+    ],
   },
   {
     slug: "sfml-corporate-film",
-    title: "Safe, Clean & Sustainable Business — SFML — Corporate Film",
+    title: "Safe, Clean & Sustainable Business",
     category: "Corporate Film",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/09/MAKING-BUSINESS-SAFE-CLEAN-AND-SUSTAINABLE-SFML-CORPORATE-FILM-BY-ARIF-SONNET-1-jpg.webp",
-    videoUrl: "https://arifsonnet.com/works/making-business-safe-clean-sustainable-s-f-m-l-corporate-film/",
+    client: "Sublime Facilities Management Ltd.",
+    poster: "/images/work/sfml-corporate-film.webp",
+    youtubeId: "oOPP7VVra98",
+    synopsis: "Exploring the world of Facilities Management in Bangladesh — the key principles of a top-notch facilities management company, and how they align with a commitment to quality, professionalism, and respect for all.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Cinematographer", name: "Anowar Hossain" },
+      { role: "Editor", name: "Alif Islam Mukut" },
+      { role: "Line Producer", name: "Sayed Konok" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
   {
     slug: "prem-puran",
-    title: "Prem Puran — Short Film — Chorki",
+    title: "Prem Puran",
     category: "Narrative Fiction",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/01/prem-puran-1.jpg",
-    videoUrl: "https://arifsonnet.com/works/prem-puran-ii-short-film-ii-chorki/",
+    client: "Chorki",
+    poster: "/images/work/prem-puran.jpg",
+    youtubeId: "bTJmG2hXvhY",
+    synopsis: "A heartwarming short film — Shanu, a young woman from a life of privilege, follows her heart and her love for the idealistic Tajul, abandoning her opulent lifestyle to build a new reality with him.",
+    credits: [
+      { role: "Director", name: "Zahid Gogon" },
+      { role: "Producer", name: "Arif Sonnet" },
+      { role: "DOP", name: "Kamrul Hasan Khosru" },
+      { role: "Production", name: "Filmmistri Production" },
+      { role: "Release", name: "Chorki, Lagvelki" },
+    ],
   },
   {
     slug: "passion-for-precision",
-    title: "Passion for Precision — Corporate Film — DBL Pharmaceuticals Ltd.",
+    title: "Passion for Precision",
     category: "Corporate Film",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/09/PASSION-FOR-PRECISION-CORPORATE-FILM-DBL-PHARMA-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/passion-for-precision-corporate-film-dbl-pharmaceuticals-ltd/",
+    client: "DBL Pharmaceuticals Ltd.",
+    poster: "/images/work/passion-for-precision.webp",
+    youtubeId: "9VHKHVPkso0",
+    synopsis: "DBL Pharma, a rising star in Bangladesh's pharmaceutical industry, on its mission for healthier living through precision manufacturing and quality control — meeting first-world regulatory standards on the path to becoming a trusted global pharmaceutical company.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Producer", name: "Ami Sayeed" },
+      { role: "Cinematographer", name: "Saddat Hossain" },
+      { role: "Editor", name: "Alif Islam Mukut" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
   {
     slug: "mentors-british-council",
     title: "Mentors' British Council IELTS Test Centre",
     category: "Commercial",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/08/MENTORS-BRITISH-COUNCIL-IELTS-TEST-CENTRE-FOR-MENTORS-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/mentors-british-council-ielts-test-centre-ii-mentors/",
+    client: "Mentors'",
+    poster: "/images/work/mentors-british-council.jpg",
+    youtubeId: "RTzgHxNNFX0",
+    synopsis: "Mentors' British Council IELTS Test Centre — a dedicated destination for IELTS excellence, with personalized training and expert guidance from experienced instructors in a nurturing environment.",
+    credits: [
+      { role: "Direction", name: "Arif Sonnet" },
+      { role: "Producer", name: "Ami Sayeed" },
+      { role: "Cinematographer", name: "Robin Gazi" },
+      { role: "Project Manager", name: "Ireen Akter Elora" },
+      { role: "Production Manager", name: "Md Ershad Khan" },
+    ],
   },
   {
     slug: "sustainable-denim",
-    title: "Making Sustainable Denim — Corporate Film — Noize Jeans Ltd.",
+    title: "Making Sustainable Denim",
     category: "Corporate Film",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/09/MAKING-SUSTAINABLE-DENIM-NOIZE-JENS-CORPORATE-DOCUMENTARY-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/making-sustainable-denim-corporate-film-noize-jeans-ltd/",
+    client: "Noize Jeans Ltd. — Denim Asia",
+    poster: "/images/work/sustainable-denim.jpg",
+    youtubeId: "zYYQlcwMjvs",
+    synopsis: "The success story of Noize, a trailblazing supply-chain partner in fast fashion and value retailing — product development, sourcing, and sustainable production processes told through the synergy of business innovation and creative storytelling.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Cinematographer", name: "Anuwar Anu" },
+      { role: "Editor", name: "Uday Hasan" },
+      { role: "Line Producer", name: "Sayed Konok" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
   {
     slug: "joy-of-giving",
-    title: "Joy of Giving — Spreading Happiness — OVC — HSBC Bank Bangladesh",
+    title: "Joy of Giving — Spreading Happiness",
     category: "Documentary",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/08/JOY-OF-GIVING-SPREADING-HAPPINESS-DOCUMENTARY-FOR-HSBC-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/joy-of-giving-ii-spreading-happiness-ii-ovc-ii-hsbc-bank-bangladesh/",
+    client: "HSBC Bank Bangladesh",
+    poster: "/images/work/joy-of-giving.jpg",
+    youtubeId: "2BUuCgUJnXw",
+    synopsis: "A heartwarming OVC for HSBC Bank Bangladesh celebrating the beauty of spreading happiness — a reminder that even small acts of generosity and compassion can create ripples of joy that touch lives.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Producer", name: "Ami Sayeed" },
+      { role: "Cinematographer", name: "Saddat Hossain" },
+      { role: "Narration", name: "Raisul Islam Asad" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
   {
     slug: "introducing-deligram",
-    title: "Introducing Deligram — OVC — deligram.com",
+    title: "Introducing Deligram",
     category: "Commercial",
-    poster: "https://arifsonnet.com/wp-content/uploads/2023/08/INTRODUCING-DELIGRAM-OVC-FOR-DELIGRAM-BY-ARIF-SONNET.jpg",
-    videoUrl: "https://arifsonnet.com/works/introducing-deligram-ii-ovc-ii-deligram-com/",
+    client: "Deligram Technologies Limited",
+    poster: "/images/work/introducing-deligram.jpg",
+    youtubeId: "ovHhVq-yDFc",
+    synopsis: "A visually stunning OVC introducing Deligram.com — how the platform is revolutionizing online shopping across groceries, fashion, electronics, and home essentials.",
+    credits: [
+      { role: "Director", name: "Arif Sonnet" },
+      { role: "Producer", name: "Ami Sayeed" },
+      { role: "Cinematographer", name: "Rajin Munir" },
+      { role: "Assistant Director", name: "Nazmul Hasan Hira" },
+      { role: "Studio", name: "MVRK Studios Ltd" },
+    ],
   },
 ];
 
@@ -100,19 +192,19 @@ export interface BrandClient {
   logo: string;
 }
 
-// Real logo files, pulled directly from the WordPress REST media API
-// (arifsonnet.com/wp-json/wp/v2/media) — the live "Brand's Realm" carousel
-// itself never finished rendering during the content pull.
+// Real logo files, pulled from the WordPress REST media API and self-hosted
+// here — arifsonnet.com is slated for removal, so nothing on this site can
+// depend on it staying up.
 export const BRAND_CLIENTS: BrandClient[] = [
-  { name: "Grameenphone", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-gp.png" },
-  { name: "Robi Axiata", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-robi.png" },
-  { name: "bKash", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-bkash.png" },
-  { name: "HSBC", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-hsbc.png" },
-  { name: "Unilever Bangladesh", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-unilever.png" },
-  { name: "PUBG Mobile Bangladesh", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-pubg.png" },
-  { name: "UNDP", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-undp.png" },
-  { name: "Young Bangla", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-young-bangla.png" },
-  { name: "DBL Group", logo: "https://arifsonnet.com/wp-content/uploads/2022/12/client-logo-dbll.png" },
+  { name: "Grameenphone", logo: "/images/brands/grameenphone.png" },
+  { name: "Robi Axiata", logo: "/images/brands/robi.png" },
+  { name: "bKash", logo: "/images/brands/bkash.png" },
+  { name: "HSBC", logo: "/images/brands/hsbc.png" },
+  { name: "Unilever Bangladesh", logo: "/images/brands/unilever.png" },
+  { name: "PUBG Mobile Bangladesh", logo: "/images/brands/pubg.png" },
+  { name: "UNDP", logo: "/images/brands/undp.png" },
+  { name: "Young Bangla", logo: "/images/brands/young-bangla.png" },
+  { name: "DBL Group", logo: "/images/brands/dbl-group.png" },
 ];
 
 export const PROFILE = {
