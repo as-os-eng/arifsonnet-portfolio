@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { FILM_PROJECTS } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -22,12 +24,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const next = FILM_PROJECTS[(index + 1) % FILM_PROJECTS.length];
 
   return (
-    <main className="rise-in">
-      <header className="px-5 sm:px-10 pt-8" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
-        <Link href="/#work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
-          ← Directorial Portfolio
-        </Link>
-      </header>
+    <>
+      <Nav />
+      <main className="rise-in">
+        <header className="px-5 sm:px-10 pt-8" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
+          <Link href="/#work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
+            ← Directorial Portfolio
+          </Link>
+        </header>
 
       <section className="px-5 sm:px-10 pt-6" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
         <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
@@ -88,6 +92,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           View →
         </Link>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

@@ -5,23 +5,23 @@ import { Menu, X } from "lucide-react";
 import { PROFILE } from "@/lib/data";
 
 const LINKS = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/#work" },
+  { label: "Journal", href: "/journal" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <div className="nav-sticky">
-      <div className="flex items-center justify-between gap-4 py-4 px-5 sm:px-10" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
-        <a href="#" className="text-[15px] font-semibold tracking-[0.02em]" style={{ fontFamily: "var(--font-display)" }}>
+      <div className="flex items-center justify-between gap-4 py-5 px-5 sm:px-10" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
+        <a href="/" className="text-[17px] font-semibold tracking-[-0.01em]" style={{ fontFamily: "var(--font-display)" }}>
           {PROFILE.name}
         </a>
-        <nav className="hidden sm:flex items-center gap-7">
+        <nav className="hidden sm:flex items-center gap-9">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href} className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--ivory-100)] transition-colors">
+            <a key={l.href} href={l.href} className="text-[13px] font-medium uppercase tracking-[0.08em] text-[var(--ivory-300)] hover:text-[var(--ivory-100)] transition-colors">
               {l.label}
             </a>
           ))}

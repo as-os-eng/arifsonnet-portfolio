@@ -207,6 +207,38 @@ export const BRAND_CLIENTS: BrandClient[] = [
   { name: "DBL Group", logo: "/images/brands/dbl-group.png" },
 ];
 
+export interface JournalPost {
+  slug: string;
+  title: string;
+  dek: string;
+  date: string; // ISO
+  cover: string;
+  body: string[]; // paragraphs
+}
+
+// Editorial "Journal" section — same long-form anatomy as the reference
+// article (zoomcorp.com's creator-interview posts): cover image, dek,
+// dated byline, body copy. This first entry is a craft reflection I
+// (Claude) drafted grounded only in verified facts already pulled from
+// arifsonnet.com — real client names, real project genres, real
+// duration of the body of work — with no invented anecdotes, dialogue,
+// or quotes put in Arif's mouth. Treat it as a first draft to edit into
+// his own voice, not a transcript of anything he actually said.
+export const JOURNAL_POSTS: JournalPost[] = [
+  {
+    slug: "directing-for-broadcast-and-brand",
+    title: "Directing for Broadcast and Brand",
+    dek: "A decade moving between documentary, corporate film, and commercial work — on why the discipline doesn't change, even when the client does.",
+    date: "2026-09-17",
+    cover: "/images/work/joy-of-giving.jpg",
+    body: [
+      "Most of the work that crosses my desk falls into one of three rooms: a broadcaster's, a boardroom's, or a brand's. Ekattor TV wants a documentary that finds the human story inside a policy issue. DBL Pharmaceuticals and Sublime Facilities Management want a corporate film that makes an invisible process — manufacturing, facilities management — visible and credible. HSBC and PUBG Mobile Bangladesh want a commercial that lands a feeling in under two minutes. Different rooms, different clients, same job: find the one true thing worth pointing a camera at, and don't flinch from it.",
+      "The instinct to treat these as separate disciplines is common, and I think it's a mistake. A documentary that doesn't understand pacing loses its audience the same way a commercial does. A corporate film that doesn't find a real character — a technician, a line manager, a farmer — is just a slideshow with better lighting. The tools change: a 35-minute short film like Prem Puran, produced for Chorki, earns the right to sit with a scene the way a 60-second OVC never can. But the underlying question is identical in every format: who is this actually about, and what do they want that they can't say out loud.",
+      "What's changed over ten years isn't the craft, it's the range of rooms I get invited into. Ekattor Television, HSBC Bank Bangladesh, DBL Pharmaceuticals, Noize Jeans, Sublime Facilities Management, Mentors' British Council, Deligram, Chorki — every one of these came with its own constraints, its own audience, its own idea of what \"good\" looks like. Directing across that range means holding two things at once: a house style you can be recognized by, and enough humility to let each client's real story shape the film instead of the other way around.",
+    ],
+  },
+];
+
 export const PROFILE = {
   name: "Arif Sonnet",
   role: "Visual Storyteller — Director & Producer",

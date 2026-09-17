@@ -4,6 +4,7 @@ import { FilmGrid } from "@/components/film-grid";
 import { Services } from "@/components/services";
 import { BrandCarousel } from "@/components/brand-carousel";
 import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <BrandCarousel />
       <Contact />
+      <Footer />
     </>
   );
 }
