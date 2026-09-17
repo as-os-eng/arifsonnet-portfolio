@@ -15,6 +15,7 @@ export function Contact() {
         <a href={PROFILE.socials.youtube} aria-label="YouTube" className="hover:text-[var(--ivory-100)]"><Youtube className="w-5 h-5" /></a>
         <a href={PROFILE.socials.instagram} aria-label="Instagram" className="hover:text-[var(--ivory-100)]"><Instagram className="w-5 h-5" /></a>
         <a href={PROFILE.socials.facebook} aria-label="Facebook" className="hover:text-[var(--ivory-100)]"><Facebook className="w-5 h-5" /></a>
+        <a href={PROFILE.socials.imdb} aria-label="IMDb" className="text-[13px] font-semibold tracking-wide hover:text-[var(--ivory-100)]">IMDb</a>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FILM_PROJECTS, type FilmCategory } from "@/lib/data";
 
-const CATEGORIES: (FilmCategory | "All")[] = ["All", "Animation", "Corporate", "Documentary", "Narrative Fiction"];
+const CATEGORIES: (FilmCategory | "All")[] = ["All", "Documentary", "Corporate Film", "Commercial", "Narrative Fiction"];
 
 export function FilmGrid() {
   const [active, setActive] = useState<FilmCategory | "All">("All");
@@ -31,16 +31,18 @@ export function FilmGrid() {
         {items.map((p) => (
           <a
             key={p.slug}
-            href={p.videoUrl || "#"}
+            href={p.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group block rounded-[14px] overflow-hidden bg-[var(--clay-900)] border border-[var(--clay-line)]"
           >
             <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element -- placeholder posters, swap for real project stills */}
+              {/* eslint-disable-next-line @next/next/no-img-element -- real project stills, hotlinked from arifsonnet.com for now */}
               <img src={p.poster} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
             <div className="p-4">
-              <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">{p.category} · {p.year}</span>
-              <h3 className="mt-1 text-[15px] font-medium">{p.title}</h3>
+              <span className="text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">{p.category}</span>
+              <h3 className="mt-1 text-[15px] font-medium leading-snug">{p.title}</h3>
             </div>
           </a>
         ))}
