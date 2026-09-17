@@ -8,7 +8,7 @@ const BASE_URL = "https://arifsonnet-portfolio.arifsonnet-webid.workers.dev";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/work", "/frame", "/journal", "/services", "/about", "/contact"].map((path) => ({
+  const staticRoutes = ["", "/film", "/documentary", "/commercial", "/frame", "/journal", "/about", "/contact"].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
   }));

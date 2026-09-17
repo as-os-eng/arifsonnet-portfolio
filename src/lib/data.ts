@@ -23,6 +23,15 @@ export interface FilmProject {
 // Synopsis and credits are real, pulled and hand-cleaned from each project's
 // arifsonnet.com /works/ page (2026-09-17) — that WordPress site is slated
 // for removal once this site ships, so this is the last live pull from it.
+// Real category → nav route mapping: "Corporate Film" and "Narrative
+// Fiction" both live under the top-level "Film" page, "Documentary" and
+// "Commercial" get their own, matching the site's real nav structure.
+export function categoryHref(category: FilmCategory): "/film" | "/documentary" | "/commercial" {
+  if (category === "Documentary") return "/documentary";
+  if (category === "Commercial") return "/commercial";
+  return "/film";
+}
+
 export const FILM_PROJECTS: FilmProject[] = [
   {
     slug: "squad-up-with-the-legends",

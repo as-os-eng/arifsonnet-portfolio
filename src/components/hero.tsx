@@ -29,7 +29,7 @@ export function Hero() {
           <p className="max-w-[46ch] text-[16px] sm:text-[18px] text-[var(--ivory-300)] leading-relaxed">
             {PROFILE.name} — {PROFILE.role}. Documentary, commercial, and narrative work built on a decade of directing for broadcast and brand.
           </p>
-          <a href="/work" className="shrink-0 inline-block px-6 py-3 rounded-full border border-[var(--clay-line)] text-[13px] font-medium hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors w-fit">
+          <a href="/film" className="shrink-0 inline-block px-6 py-3 rounded-full border border-[var(--clay-line)] text-[13px] font-medium hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors w-fit">
             View the work
           </a>
         </div>

@@ -5,11 +5,12 @@ import { Menu, X } from "lucide-react";
 import { PROFILE } from "@/lib/data";
 
 const LINKS = [
-  { label: "Films & Documentary", href: "/work" },
+  { label: "Film", href: "/film" },
+  { label: "Documentary", href: "/documentary" },
+  { label: "Commercial", href: "/commercial" },
   { label: "Frame", href: "/frame" },
   { label: "Journal", href: "/journal" },
-  { label: "Commercials", href: "/services" },
-  { label: "About", href: "/about" },
+  { label: "Bio", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 

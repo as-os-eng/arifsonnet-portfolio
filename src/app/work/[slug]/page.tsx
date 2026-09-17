@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
-import { FILM_PROJECTS } from "@/lib/data";
+import { FILM_PROJECTS, categoryHref } from "@/lib/data";
 
 export function generateStaticParams() {
   return FILM_PROJECTS.map((p) => ({ slug: p.slug }));
@@ -28,8 +28,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Nav />
       <main className="rise-in">
         <header className="px-5 sm:px-10 pt-8" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
-          <Link href="/work" className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
-            ← Directorial Portfolio
+          <Link href={categoryHref(project.category)} className="text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
+            ← {project.category}
           </Link>
         </header>
 
