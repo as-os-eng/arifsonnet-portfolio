@@ -9,7 +9,8 @@ const LINKS = [
   { label: "Frame", href: "/frame" },
   { label: "Journal", href: "/journal" },
   { label: "Services", href: "/#services" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Nav() {

@@ -1,11 +1,15 @@
+import Link from "next/link";
 import { SERVICES, PROFILE } from "@/lib/data";
 
 export function Services() {
   return (
-    <section id="about" className="px-5 sm:px-10 py-24 border-t border-[var(--clay-line)]" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
+    <section className="px-5 sm:px-10 py-24 border-t border-[var(--clay-line)]" style={{ maxWidth: "var(--content-w)", margin: "0 auto" }}>
       <p className="text-[22px] sm:text-[32px] leading-snug max-w-[42ch]" style={{ fontFamily: "var(--font-display)" }}>
-        {PROFILE.bio}
+        &ldquo;{PROFILE.quote}&rdquo;
       </p>
+      <Link href="/about" className="mt-4 inline-block text-[13px] font-medium text-[var(--ivory-300)] hover:text-[var(--accent)] transition-colors">
+        More about {PROFILE.name} →
+      </Link>
 
       <div id="services" className="mt-20">
         <h2 className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ivory-500)] mb-2">What I Direct</h2>

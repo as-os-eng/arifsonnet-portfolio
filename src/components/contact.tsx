@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PROFILE } from "@/lib/data";
 
 export function Contact() {
@@ -10,12 +11,21 @@ export function Contact() {
           <br />
           <span className="italic text-[var(--ivory-300)]">together.</span>
         </h2>
-        <a
-          href={`mailto:${PROFILE.email}`}
-          className="inline-block mt-10 text-[20px] sm:text-[28px] underline decoration-[var(--accent)] underline-offset-8 decoration-2 hover:text-[var(--accent)] transition-colors"
-        >
-          {PROFILE.email}
-        </a>
+        <p className="mt-6 max-w-[54ch] text-[16px] text-[var(--ivory-300)]">{PROFILE.footerTagline}</p>
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <a
+            href={`mailto:${PROFILE.email}`}
+            className="text-[20px] sm:text-[28px] underline decoration-[var(--accent)] underline-offset-8 decoration-2 hover:text-[var(--accent)] transition-colors"
+          >
+            {PROFILE.email}
+          </a>
+          <Link
+            href="/contact"
+            className="inline-block px-6 py-3 rounded-full border border-[var(--clay-line)] text-[13px] font-medium hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+          >
+            Contact form →
+          </Link>
+        </div>
       </div>
     </section>
   );
