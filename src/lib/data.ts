@@ -309,9 +309,9 @@ export const PROFILE = {
   name: "Arif Sonnet",
   role: "Solo Entrepreneur · Venture-Automation Architect · Filmmaker · Policy Advocacy Researcher",
   location: "Dhaka, Bangladesh",
-  bio: "ARIF SONNET is a Bangladeshi Visual Storyteller who has been creating captivating stories for over a decade. He is a director, producer, and entrepreneur who has worked with prestigious organizations like the BBC, Ekattor TV, mvrk.tv, and major media outlets in Bangladesh. His work spans across various genres and formats, from documentaries to commercials, from short films to television shows.",
+  bio: "Dhaka-based entrepreneur, filmmaker, and systems builder — founder of Zen Tea, architect of AS-SP, and an award-winning documentary director who has worked with the BBC, Ekattor TV, and MVRK Studios.",
   quote: "I build the tools I need, then use them to build everything else — a film, a brand, an argument for reform. Same discipline, different canvas.",
-  footerTagline: "Let's create the Magic of Visual Storytelling with ARIF SONNET and transform the Dreams into Cinematic Realities.",
+  footerTagline: "Let's build something real — a film, a venture, or the system behind it.",
   bioParagraphs: [
     "Arif Sonnet (legally Md. Arif Hossain) is a Dhaka-based entrepreneur, filmmaker, and systems builder — a decade-plus career spanning documentary and commercial filmmaking, founding and running real ventures, and architecting AS-SP, a self-hosted agentic operating system that runs his entire portfolio of work.",
     "As a filmmaker, he has directed and produced across genres — “Prem Puran (Myth of Love)” (2019), the National Award-winning documentary “Janmasathi,” and “Indian Frontier Railway: Maitree Express” for the BBC (2015). As Director of Audio Visual at MVRK Studios since 2016, he has led corporate and commercial AV work for HSBC, BRAC, Robi Axiata, Grameenphone, bKash, Citi, DBL Group, and the World Bank, among others.",
