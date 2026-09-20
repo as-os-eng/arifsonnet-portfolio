@@ -307,17 +307,16 @@ export const JOURNAL_POSTS: JournalPost[] = [
 // (2026-09-17) — real text from the old site, not new copy.
 export const PROFILE = {
   name: "Arif Sonnet",
-  role: "Visual Storyteller — Director & Producer",
+  role: "Solo Entrepreneur · Venture-Automation Architect · Filmmaker · Policy Advocacy Researcher",
   location: "Dhaka, Bangladesh",
   bio: "ARIF SONNET is a Bangladeshi Visual Storyteller who has been creating captivating stories for over a decade. He is a director, producer, and entrepreneur who has worked with prestigious organizations like the BBC, Ekattor TV, mvrk.tv, and major media outlets in Bangladesh. His work spans across various genres and formats, from documentaries to commercials, from short films to television shows.",
-  quote: "For me, it's all about capturing moment and sharing beautiful cinematic experiences that resonate life.",
+  quote: "I build the tools I need, then use them to build everything else — a film, a brand, an argument for reform. Same discipline, different canvas.",
   footerTagline: "Let's create the Magic of Visual Storytelling with ARIF SONNET and transform the Dreams into Cinematic Realities.",
   bioParagraphs: [
-    "ARIF SONNET is a Bangladeshi Visual Storyteller who has been creating captivating stories for over a decade. He is a director, producer, and entrepreneur who has worked with prestigious organizations like the BBC, Ekattor TV, mvrk.tv and major media outlets in Bangladesh. His work spans across various genres and formats, from documentaries to commercials, from short films to television shows.",
-    "In 2019, Arif Sonnet produced the short film “Prem Puran AKA Myth of Love,” which gained recognition and accolades at prestigious international film festivals, further solidifying his position as a talented and innovative filmmaker.",
-    "Arif Sonnet's expertise extends to documentary filmmaking, showcased through collaborations with renowned organizations like the BBC. Notable works include the documentaries “Indian Frontier Railway: Maitree Express” in 2015 and “Janmashtami AKA Born Together” in 2016, the latter earning the esteemed National Award for its portrayal of a liberation war story.",
-    "Throughout his career, Arif Sonnet has collaborated with prominent media outlets such as Ekattor TV, The Daily Star, The Daily Jugantor, Filmshop, and Geonics, showcasing his talents and contributing to the growth of the Bangladeshi entertainment industry.",
-    "Arif Sonnet possesses extensive experience in various aspects of filmmaking, including directing, cinematography, and editing. He has worked across different genres, from narrative fiction to documentaries, commercials, and corporate films. He has successfully collaborated with both local brands and esteemed corporate clients, including UNDP, UNHCR, HSBC, Robi Axiata, Grameenphone, The City Bank, FBCCI, BRAC, Urmi Group, and DBL Group.",
+    "Arif Sonnet (legally Md. Arif Hossain) is a Dhaka-based entrepreneur, filmmaker, and systems builder — a decade-plus career spanning documentary and commercial filmmaking, founding and running real ventures, and architecting AS-SP, a self-hosted agentic operating system that runs his entire portfolio of work.",
+    "As a filmmaker, he has directed and produced across genres — “Prem Puran (Myth of Love)” (2019), the National Award-winning documentary “Janmasathi,” and “Indian Frontier Railway: Maitree Express” for the BBC (2015). As Director of Audio Visual at MVRK Studios since 2016, he has led corporate and commercial AV work for HSBC, BRAC, Robi Axiata, Grameenphone, bKash, Citi, DBL Group, and the World Bank, among others.",
+    "As an entrepreneur, he founded and runs Authentic Tea Ltd. (“Zen Tea”) — sourcing, production, packaging, and distribution, end to end. He also built AS-SP: a real, self-hosted multi-agent automation system now running daily operations across his ventures — content pipelines, research, brand automation, and business intelligence — not a concept, a live system he personally engineers and operates.",
+    "As a policy advocate, he is active in the Bangladesh Cholochitro Songskar (Cinema Reform) Roadmap — real, ongoing advocacy on FDC, censorship, and film-funding reform, anchored by a working community of 300+ Bangladeshi film professionals and enthusiasts.",
   ],
   email: "arifsonnet.pro@gmail.com",
   socials: {
